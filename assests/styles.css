@@ -1,0 +1,54 @@
+.hhh
+{
+    
+    color :white;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+body
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./background.png );
+    background-size: cover;
+    background-attachment: fixed;
+
+    
+}
+.s
+{
+    width: 90%;
+    max-width: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./OIP.jpg);
+    background-size: cover;
+    background-position:center;
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+    margin: 200px auto 0;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.8);
+}
+.s h1
+{
+    margin-top: 60px;
+    font-size: 64px;
+    font-weight: 300;
+
+}
+.b
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.b img
+{
+    width: 50px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.b img:nth-child(2)
+{
+    width: 80px;
+}

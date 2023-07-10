@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOP WATCH</title>
+    <link rel="stylesheet" href="./assests/styles.css">
+</head>
+<body>
+    
+    <div class="s">
+        
+       <h1 id="dt">00:00:00</h1>
+        <div class="b">
+            <img src="./assests/stop.png" onclick="wst()" >
+            <img src="./assests/start.png" onclick="ws()" >
+            <img src="./assests/reset.png" onclick="reset()" >
+
+        </div>
+    </div>
+    <script>
+        let [s,m,h] = [0,0,0];
+        let dt = document.getElementById("dt");
+        let time = null;
+
+        function st()
+        {
+            s++;
+            if(s == 60)
+            {
+                s = 0;
+                m++;
+            }
+            if(m == 60)
+            {
+                m = 0;
+                h++;
+            }
+            let hh = h < 10 ? "0" + h : h;
+            let mm = m < 10 ? "0" + m : m;
+            let ss = s < 10 ? "0" + s : s;
+
+
+
+            dt.innerHTML = h + ":" + m + ":" + s;
+            dt.innerHTML = hh + ":" + mm + ":" + ss;
+        }
+
+        function ws()
+        {
+            if(time!=null)
+            {
+                clearInterval(time);
+            }
+            time = setInterval(st,1000);
+        }
+        function wst()
+        {
+            clearInterval(time);
+        }
+        function reset()
+        {
+            clearInterval(time);
+            [s,m,h] = [0,0,0];
+            dt.innerHTML = "00:00:00";
+        }
+    </script>
+</body>
+</html>
